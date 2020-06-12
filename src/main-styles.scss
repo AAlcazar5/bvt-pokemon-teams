@@ -1,0 +1,29 @@
+// defining the global styles and changing variables
+
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Roboto:300,900');
+
+// Set project colors: pokemon main colors
+$red: #CC0000;
+$light-red: #FF0000;
+$blue: #3B4CCA;
+$yellow: #FFDE00;
+$gold: #B3A125;
+$grey: rgb(128,128,128);
+$light-grey: rgb(211,211,211);
+$white: rgb(255,255,255);
+
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$primary: $red;
+$link: $red;
+
+// Update some of Bulma's component variables
+$body-background-color: white;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-background-color: light-grey;
+$input-shadow: none;

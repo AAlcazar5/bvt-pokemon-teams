@@ -1,0 +1,47 @@
+<!-- <div class="card">
+    <div class="card-content"> -->
+<h2 class="title">Add Pokemon</h2>
+ 
+<form #itemForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="field is-horizontal">
+        <div class="field-body">
+
+            <div class="field">
+                <p class="control">
+                    <input type="text" placeholder="name" class="input" style="width: 100px; border-color: red;"
+                        [(ngModel)]="pokemon.name" name="name">
+                </p>
+            </div>
+
+            <div class="field">
+                <p class="control">
+                    <input type="text" placeholder="hp" class="input" style="width: 100px; border-color: red;"
+                        [(ngModel)]="pokemon.hp" name="hp">
+                </p>
+            </div>
+
+            <div class="field">
+                <p class="control">
+                    <input type="text" placeholder="atk" class="input" style="width: 100px; border-color: red;"
+                        [(ngModel)]="pokemon.atk" name="atk">
+                </p>
+            </div>
+
+            <div class="field">
+                <p class="control">
+                    <input type="text" placeholder="def" class="input" style="width: 100px; border-color: red;"
+                        [(ngModel)]="pokemon.def" name="def">
+                </p>
+            </div>
+
+            <button type="submit" class="button" style="background-color: red; color: white;">
+                <p>Add</p>
+            </button>
+
+        </div>
+
+
+    </div>
+</form>
+<!-- </div>
+</div> -->

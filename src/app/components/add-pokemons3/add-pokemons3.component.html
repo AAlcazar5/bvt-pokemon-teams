@@ -1,0 +1,44 @@
+<h2 class="title">Add Pokemon</h2>
+
+
+        <form #itemForm="ngForm" (ngSubmit)="onSubmit()">
+            <div class="field is-horizontal">
+                <div class="field-body">
+        
+                    <div class="field">
+                        <p class="control">
+                            <input type="text" placeholder="name" class="input" style="width: 100px; border-color: red;"
+                                [(ngModel)]="pokemon3.name" name="name">
+                        </p>
+                    </div>
+        
+                    <div class="field">
+                        <p class="control">
+                            <input type="text" placeholder="hp" class="input" style="width: 100px; border-color: red;"
+                                [(ngModel)]="pokemon3.hp" name="hp">
+                        </p>
+                    </div>
+        
+                    <div class="field">
+                        <p class="control">
+                            <input type="text" placeholder="atk" class="input" style="width: 100px; border-color: red;"
+                                [(ngModel)]="pokemon3.atk" name="atk">
+                        </p>
+                    </div>
+        
+                    <div class="field">
+                        <p class="control">
+                            <input type="text" placeholder="def" class="input" style="width: 100px; border-color: red;"
+                                [(ngModel)]="pokemon3.def" name="def">
+                        </p>
+                    </div>
+        
+                    <button type="submit" class="button" style="background-color: red; color: white;">
+                        <p>Add</p>
+                    </button>
+        
+                </div>
+        
+        
+            </div>
+        </form> 

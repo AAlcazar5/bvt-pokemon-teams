@@ -1,0 +1,26 @@
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 15px;
+    font-size: 25px;
+} 
+
+.field {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.field-body {
+    display: flex;
+    flex-direction: row;
+    max-width: 840px;
+    margin-right: 20px
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
