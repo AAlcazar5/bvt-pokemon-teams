@@ -1,0 +1,90 @@
+<div class="top-bar" style="margin-top: 10px;">
+    <h1>My Pokemon Go Team 1</h1>
+</div>
+
+<!-- Add Pokemon Section -->
+<app-add-pokemons></app-add-pokemons>
+
+<hr>
+
+<!-- Individual Pokemons Section -->
+
+<section class="pokemon-items-section">
+    <div class="pokemon-items-container">
+
+        <div *ngIf="pokemons?.length > 0;else noPokemons" class="field pokemon-column">
+            <ul *ngFor="let pokemon of pokemons" class="collection">
+                <li class="pokemon-item" style="margin-bottom:20px;">
+                    <div class="name">
+                        <p><strong>{{pokemon.name}}</strong></p>
+                    </div>
+
+                    <div class="hp">
+                        <p>{{pokemon.hp}}</p>
+                    </div>
+
+                    <div class="atk">
+                        <p>{{pokemon.atk}}</p>
+                    </div>
+
+                    <div class="def">
+                        <p>{{pokemon.def}}</p>
+                    </div>
+
+                    <a href="localhost:4200/team-1/#" class="secondary-content">
+                        <i (click)="editPokemon($event, pokemon)" class="fa fa-pencil" title="Edit"></i>
+                        <i *ngIf="editState && pokemonToEdit.id == pokemon.id" (click)="clearState()"
+                            class="fa fa-compress"></i>
+                    </a>
+
+                    <div *ngIf="editState && pokemonToEdit.id == pokemon.id">
+                        <form (ngSubmit)="updatePokemon(pokemon)">
+                            <div class="row">
+
+                                <div class="field">
+                                    <p class="control">
+                                        <input type="text" placeholder="name" class="input" [(ngModel)]="pokemon.name"
+                                            name="name">
+                                    </p>
+                                </div>
+
+                                <div class="field">
+                                    <p class="control">
+                                        <input type="text" placeholder="hp" class="input" [(ngModel)]="pokemon.hp"
+                                            name="hp">
+                                    </p>
+                                </div>
+
+                                <div class="field">
+                                    <p class="control">
+                                        <input type="text" placeholder="atk" class="input" [(ngModel)]="pokemon.atk"
+                                            name="atk">
+                                    </p>
+                                </div>
+
+                                <div class="field">
+                                    <p class="control">
+                                        <input type="text" placeholder="def" class="input" [(ngModel)]="pokemon.def"
+                                            name="def">
+                                    </p>
+                                </div>
+
+                                <input type="submit" value="Update Pokemon" class="btn blue">
+                                <button type="button" (click)="deletePokemon($event, pokemon)" class="btn red">Delete
+                                    Pokemon</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- no pokemon prompt -->
+<ng-template #noPokemons>
+    <hr>
+    <h3>Add a pokemon!</h3>
+</ng-template>
